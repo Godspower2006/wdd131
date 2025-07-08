@@ -39,23 +39,30 @@ header {
   margin-bottom: 0.5rem;
 }
 
-nav {
+/* Navigation List Styles */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+nav li {
+  flex: 1;
 }
 
 nav a {
-  color: white;
+  display: block;
+  color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  padding: 0.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
 nav a:hover {
-  background-color: var(--secondary-color);
-  border-radius: 5px;
+  background-color: #444;
 }
 
 main {
