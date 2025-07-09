@@ -1,11 +1,11 @@
-/* Base styles (no media queries) */
-
+/* Use Roboto font everywhere */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Shared container styles */
 header,
 main,
 footer {
@@ -16,12 +16,14 @@ footer {
   background-color: #e6f2ff;
 }
 
+/* Stack sections in one column */
 main {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1rem;
 }
 
+/* Section styling */
 section {
   padding: 1rem;
   background-color: #fff;

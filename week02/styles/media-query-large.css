@@ -1,13 +1,12 @@
-/* Styles for viewports ≥ 500px */
-
 @media screen and (min-width: 500px) {
+  /* Dark header on larger screens */
   header {
     background-color: #000;
     color: #fff;
   }
 
+  /* Two-column layout for main */
   main {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
