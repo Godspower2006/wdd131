@@ -1,19 +1,21 @@
-/* Show nav inline and hide hamburger */
-#hamburger {
-  display: none;
-}
+@media screen and (min-width: 600px) {
+  /* Hide hamburger, show nav inline */
+  #hamburger {
+    display: none;
+  }
 
-nav {
-  display: block !important;
-}
+  nav {
+    display: block !important;
+  }
 
-nav ul {
-  display: flex;
-  gap: 2rem;
-  justify-content: flex-end;
-}
+  nav ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+  }
 
-.gallery {
-  /* 3 columns on large screens */
-  grid-template-columns: repeat(3, 1fr);
+  /* Three‑column gallery on larger screens */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

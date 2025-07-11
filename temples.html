@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Temple Album</title>
-  <!-- Mobile-first CSS -->
+  <meta name="description" content="A responsive picture album showcasing nine ancient temples with a purple-themed header/footer and JavaScript-driven footer info.">
+  <meta name="author" content="Andrew Godspower">
+
+  <!-- Mobile‑first CSS -->
   <link rel="stylesheet" href="styles/temples.css" />
-  <!-- Larger-view overrides -->
-  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 600px)" />
+  <!-- Larger‑view overrides (media query is inside the CSS file) -->
+  <link rel="stylesheet" href="styles/temples-large.css" />
+
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"/>
@@ -28,9 +32,8 @@
   </header>
 
   <main>
-    <h2>My Favorite Temples</h2>
+    <h2>Home</h2>
     <section class="gallery">
-      <!-- Repeat this figure 9× (or swap in different images) -->
       <figure>
         <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple"/>
         <figcaption>Temple of Light</figcaption>
@@ -43,7 +46,6 @@
         <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple"/>
         <figcaption>Temple of Shadows</figcaption>
       </figure>
-      <!-- …six more figures… -->
       <figure>
         <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple"/>
         <figcaption>Temple of Echoes</figcaption>
@@ -72,10 +74,11 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> 
-      🌸 Andrew Godspower 🌸 Nigeria 
+    <p>
+      &copy;<span id="year"></span>
+      🌸 Andrew Godspower 🌸 Nigeria
     </p>
-    <p>Last modified: <span id="modified"></span></p>
+    <p>Last Modification: <span id="modified"></span></p>
   </footer>
 
   <script defer src="scripts/temples.js"></script>
