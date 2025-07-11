@@ -1,5 +1,4 @@
 @media screen and (min-width: 600px) {
-  /* Hide hamburger, show nav inline */
   #hamburger {
     display: none;
   }
@@ -14,7 +13,6 @@
     justify-content: flex-end;
   }
 
-  /* Three‑column gallery on larger screens */
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
