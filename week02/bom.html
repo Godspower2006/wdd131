@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOM Chapter List</title>
+  <meta name="description" content="Enter and display your favorite Book of Mormon chapters.">
+  <meta name="author" content="Andrew Godspower">
+  
+  <link rel="stylesheet" href="styles/bom.css">
+</head>
+<body>
+  <header>
+    <h1>My Favorite Book of Mormon Chapters</h1>
+  </header>
+  
+  <main>
+    <!-- Input field and “Add” button -->
+    <form id="chapter-form">
+      <input type="text"
+             id="favchap"
+             placeholder="e.g. Alma 5"
+             aria-label="Favorite chapter, for example Alma 5"
+             required>
+      <button type="submit">Add</button>
+    </form>
+    
+    <!-- The list where new <li> items will go -->
+    <ul id="chapters">
+      <!-- dynamically populated -->
+    </ul>
+  </main>
+  
+  <footer>
+    &copy; 2025 Andrew Godspower
+  </footer>
+  
+  <script src="scripts/bom.js" defer></script>
+</body>
+</html>

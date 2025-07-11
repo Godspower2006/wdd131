@@ -1,0 +1,19 @@
+/* Show nav inline and hide hamburger */
+#hamburger {
+  display: none;
+}
+
+nav {
+  display: block !important;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.gallery {
+  /* 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
+}
