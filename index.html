@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Andrew Godspower's course home page with bio and resources">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Explore WDD 131 Dynamic Web Fundamentals: Andrew Godspower’s course hub featuring bio, location, web‑dev resources, and live date scripting for a dynamic learning experience.">
   <meta name="author" content="Andrew Godspower">
-  <title>WDD 131 – Dynamic Web Fundamentals – Andrew Godspower</title>
-
-  <!-- Main CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/base.css">
-
-  <!-- Date script (deferred) -->
   <script src="scripts/getdates.js" defer></script>
+  <title>WDD 131 – Dynamic Web Fundamentals – Andrew Godspower</title>
 </head>
 <body>
-
-  <!-- HEADER + NAV -->
   <header class="site-header">
     <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
     <nav class="main-nav">
@@ -28,17 +25,14 @@
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main class="card-container">
-    <!-- Your Name Heading -->
-    <h1 style="width:100%; text-align:center; margin-bottom:1rem;">Andrew Godspower</h1>
+    <h1>Andrew Godspower</h1>
 
-    <!-- About Me Card -->
     <section class="card about-me">
       <h2>About Me</h2>
       <div class="intro">
         <p>My name is Andrew and I’m from Abia State, Nigeria. I love music (especially drumming), learning new technologies, and spending time with family. I am passionate about software engineering and creating meaningful projects. I enjoy traveling and having thoughtful conversations.</p>
-        <img src="images/profile.png" alt="Profile photo of Andrew Godspower" width="300" height="400">
+        <img src="images/profile.jpg" alt="Portrait of Andrew Godspower" class="avatar">
       </div>
       <hr>
       <h3 class="subheading">Lagos, Nigeria</h3>
@@ -51,7 +45,6 @@
       </div>
     </section>
 
-    <!-- Web Dev Resources Card -->
     <aside class="card resources">
       <h2>Web Dev Resources</h2>
       <ul>
@@ -65,11 +58,9 @@
     </aside>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <p>&copy; <span id="currentYear"></span> 🌸 Andrew Godspower 🌸 Nigeria</p>
     <p id="lastModified"></p>
   </footer>
-
 </body>
 </html>
