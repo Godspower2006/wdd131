@@ -1,87 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yankari National Park | Andrew Godspower</title>
-  <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information.">
-  <link rel="stylesheet" href="styles/base.css">
-  <script src="scripts/place.js" defer></script>
+  <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information." />
+  <meta name="author" content="Andrew Godspower" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-
   <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header>
-    <nav>
-      <h1>Yankari National Park</h1>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#wildlife">Wildlife</a></li>
-        <li><a href="#weather">Weather</a></li>
-      </ul>
-    </nav>
+    <h1>Yankari National Park</h1>
+    <p>Discover Nigeria's Wildlife Treasure</p>
   </header>
 
   <main id="main-content">
-    <!-- Hero with responsive srcset -->
+    <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <source srcset="images/yankari-hero-large.webp" media="(min-width: 1000px)">
-        <source srcset="images/yankari-hero-medium.webp" media="(min-width: 500px)">
+        <source
+          srcset="images/yankari-hero-large.webp"
+          media="(min-width: 1000px)"
+        />
+        <source
+          srcset="images/yankari-hero-medium.webp"
+          media="(min-width: 500px)"
+        />
         <img
           src="images/yankari-hero-small.webp"
-          alt="Scenic landscape of Yankari National Park"
-          width="1500" height="750"
-        >
+          alt="Scenic view of Yankari National Park"
+          width="1500"
+          height="750"
+        />
       </picture>
     </section>
 
+    <!-- About Section -->
     <section class="info">
-  <h2>About Yankari National Park</h2>
-  <ul>
-    <li><strong>Country:</strong> Nigeria</li>
-    <li><strong>Capital:</strong> Abuja</li>
-    <li><strong>State:</strong> Bauchi</li>
-    <li><strong>Population (Bauchi State):</strong> ~6.5 million</li>
-    <li><strong>Area (Yankari Park):</strong> 2,244 km²</li>
-    <li><strong>Official Language:</strong> English</li>
-    <li><strong>Major Languages:</strong> Hausa, Fulfulde</li>
-    <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
-    <li><strong>Time Zone:</strong> West Africa Time (UTC+1)</li>
-  </ul>
-</section>
-
-    <!-- Overview -->
-    <section id="overview">
-      <h2>Overview</h2>
-      <p>Yankari National Park is Nigeria’s premier wildlife reserve, home to elephants, lions, hippos, and warm spring-fed Wikki Warm Springs.</p>
-    </section>
-
-    <!-- Wildlife -->
-    <section id="wildlife">
-      <h2>Wildlife</h2>
+      <h2>About Yankari National Park</h2>
       <ul>
-        <li>African Elephants</li>
-        <li>West African Lions</li>
-        <li>Hippopotamus</li>
-        <li>Baboon Troops</li>
+        <li><strong>Country:</strong> Nigeria</li>
+        <li><strong>State:</strong> Bauchi</li>
+        <li><strong>Capital:</strong> Bauchi City</li>
+        <li><strong>Population:</strong> ~6.5 million (Bauchi State)</li>
+        <li><strong>Area:</strong> 2,244 km² (Park)</li>
+        <li><strong>Official Language:</strong> English</li>
+        <li><strong>Major Languages:</strong> Hausa, Fulfulde</li>
+        <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+        <li><strong>Time Zone:</strong> UTC+1 (WAT)</li>
       </ul>
     </section>
 
-    <!-- Weather & Windchill -->
+    <!-- Weather Section -->
     <section id="weather">
-      <h2 class="weather">Weather</h2>
-      <p>Temperature: <span id="temp">8</span> °C</p>
-      <p>Wind Speed: <span id="speed">10</span> km/h</p>
-      <p>Wind Chill: <span id="windchill">–</span></p>
+      <h2 class="weather">Current Weather</h2>
+      <img
+        src="images/weather-icon.svg"
+        alt="Partly cloudy icon"
+        class="weather-icon"
+        width="48"
+        height="48"
+      />
+      <p>Temperature: <span id="temperature">--</span> °C</p>
+      <p>Wind Speed: <span id="windSpeed">--</span> km/h</p>
+      <p>Wind Chill: <span id="windChill">N/A</span></p>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Andrew Godspower</p>
-    <p>Last modified: <span id="modified"></span></p>
+    <p>&copy; <span id="year"></span> 🌸 Andrew Godspower 🌸 Nigeria</p>
+    <p id="lastModified"></p>
   </footer>
 
+  <script src="scripts/place.js" defer></script>
 </body>
 </html>
