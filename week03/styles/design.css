@@ -1,162 +1,213 @@
-/* Base and Layout */
+
+:root {
+  --font-base: 'Roboto', sans-serif;
+  --fs-body: clamp(1rem, 1vw + .5rem, 1.125rem);
+  --fs-heading: clamp(1.5rem, 2vw + .5rem, 2.5rem);
+
+  --clr-bg: #ffffff;
+  --clr-text: #222222;
+  --clr-primary: #702963;
+  --clr-accent: #e0aaff;
+  --clr-callout-bg: #f4f4f4;
+  --clr-callout-text: #333333;
+
+  --gap-sm: .5rem;
+  --gap-md: 1rem;
+  --gap-lg: 2rem;
+}
+
+.dark-mode {
+  --clr-bg: #1a1a1a;
+  --clr-text: #eeeeee;
+  --clr-primary: #c47bdf;
+  --clr-accent: #4b2a4d;
+  --clr-callout-bg: #2a2a2a;
+  --clr-callout-text: #dddddd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  line-height: 1.6;
+}
+
+/* Skip-link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: var(--gap-md);
+  top: var(--gap-md);
+  width: auto;
+  height: auto;
+  background: var(--clr-primary);
+  color: #fff;
+  padding: var(--gap-sm);
+  z-index: 1000;
+}
+
+/* ===== Header & Nav ===== */
+header {
+  padding: var(--gap-md);
+  background: var(--clr-primary);
+  color: #fff;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gap-md);
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+nav a:focus,
+nav a:hover {
+  text-decoration: underline;
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform .2s;
+}
+#theme-toggle:focus,
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Banner ===== */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gap-lg);
+  background: var(--clr-accent);
+}
+.banner h1 {
+  font-size: var(--fs-heading);
+  color: var(--clr-primary);
+}
+
+/* ===== Main Layout ===== */
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-lg);
+  padding: var(--gap-lg);
+}
+main h2 {
+  grid-column: 1 / -1;
+  text-align: left;
+  font-size: var(--fs-heading);
+  margin-bottom: var(--gap-md);
+}
+.grid.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-md);
+}
+
+/* ===== Callout ===== */
+.callout {
+  background: var(--clr-callout-bg);
+  color: var(--clr-callout-text);
+  padding: var(--gap-lg);
+  border-left: 4px solid var(--clr-primary);
+}
+.callout h3 {
+  margin-top: 0;
+}
+
+/* ===== Aside ===== */
+aside {
+  padding: var(--gap-md);
+  background: var(--clr-callout-bg);
+  margin: var(--gap-lg);
+  border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: var(--gap-md);
+  text-align: left;
+  background: var(--clr-primary);
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .grid.two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   PSEUDO‑CLASSES & PSEUDO‑ELEMENTS
+   ================================ */
+
+/* 1. Define a reusable border variable */
 :root {
   --bord: 1px solid #777;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  font-family: Roboto, helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.6;
-  background-color: #fff;
-  color: #333;
-}
-
-header,
-main,
-footer {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-header {
-  background-color: #702963;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-marquee {
-  padding: 1rem;
-  background-color: #eee;
-  color: #000;
-  font-size: 1rem;
-}
-
-/* Typography */
-h1 {
-  margin-top: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-h2 {
-  color: navy;
-  text-align: left;
-  margin-top: 0;
-}
-h3 {
-  margin-top: 0;
-}
-
-/* Grid Layout */
-main {
-  margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #eee;
-}
-
-main h2 {
-  grid-column: 1 / -1;
-  text-align: center;
-  color: navy;
-}
-
-article,
-ul {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border: 1px solid #ddd;
-}
-
-article p {
-  text-align: justify;
-}
-
-ul {
-  padding-left: 1.2rem;
-}
-
-/* Callout */
-.callout {
-  grid-column: 1 / -1;
-  padding: 1rem;
-  background-color: #702963;
-  color: #fff;
-  border-left: 6px solid #fff;
-}
-
-/* Footer */
-footer {
-  background-color: #702963;
-  color: #fff;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: smaller;
-  text-align: right;
-}
-
-/* Responsive Images */
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Pseudo-Classes */
-a:link,
+/* 2. Anchor tag states */
+/* visited and active links both navy */
 a:visited,
 a:active {
   color: navy;
 }
 
+/* hover state = purple */
 a:hover {
   color: purple;
 }
 
-/* DataTable Borders */
-.datatable {
-  width: 200px;
-  margin-top: 2rem;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 100px 100px;
-  align-items: center;
-  text-align: center;
-}
-
-.col {
-  border-top: var(--bord);
-  border-left: var(--bord);
-  padding: 10px;
-}
-
-.col:nth-child(even) {
+/* 3. Data‑table borders */
+/* assume structure: .datatable > .row > .col */
+.datatable .col {
   border-right: var(--bord);
-}
-
-.row:last-child {
   border-bottom: var(--bord);
-  background-color: #bbb;
 }
 
-/* Pseudo-Element Marker */
+/* remove right border on last column */
+.datatable .col:last-child {
+  border-right: none;
+}
+
+/* 4. Darker background on the last row */
+.datatable .row:last-child {
+  background-color: #ccc;
+}
+
+/* 5. Ordered‑list custom marker */
+/* changes the list marker to a navy checkmark */
 ol li::marker {
-  content: "✔︎ ";
-  color: navy;
+  content: '✓ ';
   font-size: 2rem;
+  color: navy;
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yankari National Park | Andrew Godspower</title>
+  <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information.">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <nav>
+      <h1>Yankari National Park</h1>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#wildlife">Wildlife</a></li>
+        <li><a href="#weather">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero with responsive srcset -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/yankari-hero-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/yankari-hero-medium.webp" media="(min-width: 500px)">
+        <img
+          src="images/yankari-hero-small.webp"
+          alt="Scenic landscape of Yankari National Park"
+          width="1500" height="750"
+        >
+      </picture>
+    </section>
+
+    <section class="info">
+  <h2>About Yankari National Park</h2>
+  <ul>
+    <li><strong>Country:</strong> Nigeria</li>
+    <li><strong>Capital:</strong> Abuja</li>
+    <li><strong>State:</strong> Bauchi</li>
+    <li><strong>Population (Bauchi State):</strong> ~6.5 million</li>
+    <li><strong>Area (Yankari Park):</strong> 2,244 km²</li>
+    <li><strong>Official Language:</strong> English</li>
+    <li><strong>Major Languages:</strong> Hausa, Fulfulde</li>
+    <li><strong>Currency:</strong> Nigerian Naira (₦)</li>
+    <li><strong>Time Zone:</strong> West Africa Time (UTC+1)</li>
+  </ul>
+</section>
+
+    <!-- Overview -->
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Yankari National Park is Nigeria’s premier wildlife reserve, home to elephants, lions, hippos, and warm spring-fed Wikki Warm Springs.</p>
+    </section>
+
+    <!-- Wildlife -->
+    <section id="wildlife">
+      <h2>Wildlife</h2>
+      <ul>
+        <li>African Elephants</li>
+        <li>West African Lions</li>
+        <li>Hippopotamus</li>
+        <li>Baboon Troops</li>
+      </ul>
+    </section>
+
+    <!-- Weather & Windchill -->
+    <section id="weather">
+      <h2 class="weather">Weather</h2>
+      <p>Temperature: <span id="temp">8</span> °C</p>
+      <p>Wind Speed: <span id="speed">10</span> km/h</p>
+      <p>Wind Chill: <span id="windchill">–</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Andrew Godspower</p>
+    <p>Last modified: <span id="modified"></span></p>
+  </footer>
+
+</body>
+</html>

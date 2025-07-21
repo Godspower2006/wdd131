@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Principles Demo | Andrew Godspower</title>
+  <meta name="description" content="A demo page showcasing web design best practices: responsive layout, accessibility, theming, performance.">
+  <link rel="icon" href="favicon.ico">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles/design.css">
+</head>
+<body>
+  <!-- Skip-link for screen‑readers -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header role="banner">
+    <nav role="navigation">
+      <button id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">🌓</button>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Principles</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner" role="img" aria-label="Colorful design banner">
+    <h1>Design Principles in Action</h1>
+  </div>
+
+  <main id="main-content">
+    <h2>Core Principles</h2>
+    <article class="grid two-col">
+      <p>Good design starts with understanding your user’s needs and business goals. Always begin with research.</p>
+      <ul>
+        <li>Typography: Limit to 2–3 fonts with only needed weights.</li>
+        <li>Color: Use ≤5 hues; test contrast.</li>
+        <li>Clarity: Whitespace is your friend.</li>
+      </ul>
+    </article>
+
+    <div class="callout">
+      <h3>Accessibility Check</h3>
+      <p>Ensure a contrast ratio of at least 4.5:1 for body text and 3:1 for large text.</p>
+    </div>
+  </main>
+
+  <aside role="complementary">
+    <h2>Did You Know?</h2>
+    <p>The &lt;marquee&gt; element is obsolete in HTML5. Use CSS animations instead.</p>
+  </aside>
+
+  <footer role="contentinfo">
+    <p>© 2025 Andrew Godspower</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const btn = document.getElementById('theme-toggle');
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark-mode');
+      const pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+    });
+  </script>
+</body>
+</html>
