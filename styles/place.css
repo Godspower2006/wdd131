@@ -1,7 +1,4 @@
-/* 1) Import Google Font at top of CSS */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-
-/* 2) :root variables */
+/* :root variables */
 :root {
   --primary-color: #2a4d14;
   --accent-color: #5e8c31;
@@ -21,7 +18,7 @@
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Lora', serif; /* loaded via link in HTML */
   color: var(--text-color);
   background-color: #fff;
   line-height: 1.6;
@@ -137,7 +134,7 @@ footer {
     display: none;
   }
 
-  /* inject our ⛅ after the Weather heading */
+  /* pseudo-element for weather icon in wide view */
   #weather h2::after {
     content: "⛅";
     display: inline-block;
