@@ -1,4 +1,7 @@
-/* :root variables */
+/* 1) Import Google Font at top of CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+/* 2) :root variables */
 :root {
   --primary-color: #2a4d14;
   --accent-color: #5e8c31;
