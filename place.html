@@ -6,11 +6,12 @@
   <title>Yankari National Park | Andrew Godspower</title>
   <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information." />
   <meta name="author" content="Andrew Godspower" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Base Styles (includes media queries) -->
   <link rel="stylesheet" href="styles/base.css" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -24,14 +25,8 @@
     <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <source
-          srcset="images/yankari-hero-large.webp"
-          media="(min-width: 1000px)"
-        />
-        <source
-          srcset="images/yankari-hero-medium.webp"
-          media="(min-width: 500px)"
-        />
+        <source srcset="images/yankari-hero-large.webp" media="(min-width: 1000px)" />
+        <source srcset="images/yankari-hero-medium.webp" media="(min-width: 500px)" />
         <img
           src="images/yankari-hero-small.webp"
           alt="Scenic view of Yankari National Park"
@@ -48,7 +43,7 @@
         <li><strong>Country:</strong> Nigeria</li>
         <li><strong>State:</strong> Bauchi</li>
         <li><strong>Capital:</strong> Bauchi City</li>
-        <li><strong>Population:</strong> ~6.5 million (Bauchi State)</li>
+        <li><strong>Population:</strong> ~6.5 million (Bauchi State)</li>
         <li><strong>Area:</strong> 2,244 km² (Park)</li>
         <li><strong>Official Language:</strong> English</li>
         <li><strong>Major Languages:</strong> Hausa, Fulfulde</li>
@@ -59,13 +54,12 @@
 
     <!-- Weather Section -->
     <section id="weather">
-      <h2 class="weather">Current Weather</h2>
+      <h2>Current Weather</h2>
+      <!-- SVG for mobile, hidden on desktop -->
       <img
         src="images/weather-icon.svg"
         alt="Partly cloudy icon"
         class="weather-icon"
-        width="48"
-        height="48"
       />
       <p>Temperature: <span id="temperature">--</span> °C</p>
       <p>Wind Speed: <span id="windSpeed">--</span> km/h</p>
@@ -74,7 +68,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> 🌸 Andrew Godspower 🌸 Nigeria</p>
+    <p>&copy; <span id="year"></span> Andrew Godspower | Nigeria</p>
     <p id="lastModified"></p>
   </footer>
 
