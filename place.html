@@ -55,10 +55,10 @@
     <section id="weather">
       <h2>
         Current Weather
-        <!-- Desktop-only emoticon span -->
-        <span class="weather-emoticon" aria-hidden="true">⛅</span>
-      </h2>
-      <!-- SVG for mobile, hidden on desktop -->
+        <!-- Desktop-only emoticon using <span> instead of ::after (no ::after in CSS) -->
+    <span class="weather-emoticon" aria-hidden="true">⛅</span>
+  </h2>
+  <!-- SVG for mobile, hidden on desktop -->
       <img
         src="images/weather-icon.svg"
         alt="Partly cloudy icon"
