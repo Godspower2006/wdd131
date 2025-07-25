@@ -1,0 +1,76 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Header styling */
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Main content area centered */
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Lazy-loaded images styling and fade-in animation */
+picture {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: fadeFromBlack 1s ease-in-out forwards;
+}
+
+@keyframes fadeFromBlack {
+  from {
+    opacity: 0;
+    filter: brightness(0);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+/* Footer styling */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #444;
+  margin: 0 auto 0.5rem;
+  width: 50px;
+}
