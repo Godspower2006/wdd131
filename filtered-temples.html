@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Temple Album | Responsive Picture Gallery</title>
+  <meta name="description" content="A mobile‑first, responsive album showcasing nine ancient temple images with a purple-themed header and JS‑driven footer.">
+  <meta name="author" content="Andrew Godspower">
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Home</h2>
+    <section class="gallery">
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Light</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Dawn</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Shadows</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Echoes</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Whispers</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Serenity</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Time</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Eternity</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sunlit-ancient-temple.jpg" alt="Sunlit Ancient Temple">
+        <figcaption>Temple of Harmony</figcaption>
+      </figure>
+    </section>
+  </main>
+  <footer>
+    <p>&copy;<span id="year"></span> 🌸 Andrew Godspower 🌸 Nigeria</p>
+    <p>Last Modification: <span id="modified"></span></p>
+  </footer>
+  <script defer src="scripts/temples.js"></script>
+</body>
+</html>
