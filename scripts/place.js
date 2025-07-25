@@ -1,5 +1,3 @@
-// scripts/place.js
-
 // Static temperature (°C) and wind speed (km/h)
 const temp = 30;
 const speed = 12;
@@ -10,19 +8,26 @@ function calculateWindChill(T, V) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Footer: current year & last modified
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+  const yearEl    = document.getElementById("year");
+  const lastModEl = document.getElementById("lastModified");
+  const tempEl    = document.getElementById("temperature");
+  const windEl    = document.getElementById("windSpeed");
+  const chillEl   = document.getElementById("windChill");
+
+  // 1. Footer: current year & formatted last modified
+  const now = new Date();
+  yearEl.textContent = now.getFullYear();
+  const modDate = new Date(document.lastModified);
+  lastModEl.textContent = `Last Modified: ${modDate.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' })}`;
 
   // 2. Display static weather values
-  document.getElementById("temperature").textContent = temp;
-  document.getElementById("windSpeed").textContent = speed;
+  tempEl.textContent  = `${temp.toFixed(1)}°C`;
+  windEl.textContent  = `${speed.toFixed(1)} km/h`;
 
-  // 3. Calculate & display wind chill only if conditions met
-  const wcEl = document.getElementById("windChill");
+  // 3. Calculate & display wind chill only when conditions met
   if (temp <= 10 && speed > 4.8) {
-    wcEl.textContent = calculateWindChill(temp, speed).toFixed(1) + "°C";
+    chillEl.textContent = `${calculateWindChill(temp, speed).toFixed(1)}°C`;
   } else {
-    wcEl.textContent = "N/A";
+    chillEl.textContent = 'N/A';
   }
 });

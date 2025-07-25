@@ -2,13 +2,15 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yankari National Park | Andrew Godspower</title>
-  <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information." />
-  <meta name="author" content="Andrew Godspower" />
+  <meta name="description" content="Explore Yankari National Park in Bauchi State, Nigeria—its wildlife, climate, and visitor information.">
+  <meta name="author" content="Andrew Godspower">
 
-  <!-- Base Styles (includes Google‑Font import via @import) -->
-  <link rel="stylesheet" href="styles/base.css" />
+  <!-- Google Font embed (preferred over @import) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Base Styles -->
+  <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -22,14 +24,14 @@
     <!-- Hero Section -->
     <section class="hero">
       <picture>
-        <source srcset="images/yankari-hero-large.webp" media="(min-width: 1000px)" />
-        <source srcset="images/yankari-hero-medium.webp" media="(min-width: 500px)" />
+        <source srcset="images/yankari-hero-large.webp" media="(min-width: 1000px)">
+        <source srcset="images/yankari-hero-medium.webp" media="(min-width: 500px)">
         <img
           src="images/yankari-hero-small.webp"
           alt="Scenic view of Yankari National Park"
           width="1500"
           height="750"
-        />
+        >
       </picture>
     </section>
 
@@ -51,13 +53,17 @@
 
     <!-- Weather Section -->
     <section id="weather">
-      <h2>Current Weather</h2>
+      <h2>
+        Current Weather
+        <!-- Desktop-only emoticon span -->
+        <span class="weather-emoticon" aria-hidden="true">⛅</span>
+      </h2>
       <!-- SVG for mobile, hidden on desktop -->
       <img
         src="images/weather-icon.svg"
         alt="Partly cloudy icon"
         class="weather-icon"
-      />
+      >
       <p>Temperature: <span id="temperature">--</span> °C</p>
       <p>Wind Speed: <span id="windSpeed">--</span> km/h</p>
       <p>Wind Chill: <span id="windChill">N/A</span></p>
