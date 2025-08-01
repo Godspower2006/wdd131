@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Product Review Form</title>
-  <link rel="stylesheet" href="form.css/styles.css">
+  <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <header>
@@ -12,48 +12,56 @@
   </header>
 
   <main>
-    <form id="reviewForm" action="review.html" method="get">
+    <form method="get" action="review.html" id="review-form">
       <!-- Product Name -->
-      <label for="product">Product Name <span class="required">*</span></label>
-      <select id="product" name="product" required>
-        <option disabled selected value="">Select a Product ...</option>
-      </select>
+      <div class="form-group">
+        <label for="product">Product Name<span class="required">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product …</option>
+          <!-- JS will inject options here -->
+        </select>
+      </div>
 
       <!-- Overall Rating -->
-      <fieldset>
-        <legend>Overall Rating <span class="required">*</span></legend>
-        <div class="rating">
-          <label><input type="radio" name="rating" id="rating1" value="1" required><span>☆</span></label>
-          <label><input type="radio" name="rating" id="rating2" value="2"><span>☆</span></label>
-          <label><input type="radio" name="rating" id="rating3" value="3"><span>☆</span></label>
-          <label><input type="radio" name="rating" id="rating4" value="4"><span>☆</span></label>
-          <label><input type="radio" name="rating" id="rating5" value="5"><span>☆</span></label>
-        </div>
+      <fieldset class="form-group">
+        <legend>Overall Rating<span class="required">*</span></legend>
+        <label><input type="radio" name="rating" id="rating-1" value="1" required>☆ 1</label>
+        <label><input type="radio" name="rating" id="rating-2" value="2">☆ 2</label>
+        <label><input type="radio" name="rating" id="rating-3" value="3">☆ 3</label>
+        <label><input type="radio" name="rating" id="rating-4" value="4">☆ 4</label>
+        <label><input type="radio" name="rating" id="rating-5" value="5">☆ 5</label>
       </fieldset>
 
       <!-- Date of Installation -->
-      <label for="installDate">Date of Installation <span class="required">*</span></label>
-      <input type="date" id="installDate" name="installDate" required>
+      <div class="form-group">
+        <label for="install-date">Date of Installation<span class="required">*</span></label>
+        <input type="date" id="install-date" name="installDate" required>
+      </div>
 
       <!-- Useful Features -->
-      <fieldset>
+      <fieldset class="form-group">
         <legend>Useful Features</legend>
-        <label><input type="checkbox" name="features" id="feature1" value="durability"> Durability</label>
-        <label><input type="checkbox" name="features" id="feature2" value="design"> Design</label>
-        <label><input type="checkbox" name="features" id="feature3" value="price"> Price</label>
-        <label><input type="checkbox" name="features" id="feature4" value="performance"> Performance</label>
+        <label><input type="checkbox" name="features" id="feature-a" value="featureA">Feature A</label>
+        <label><input type="checkbox" name="features" id="feature-b" value="featureB">Feature B</label>
+        <label><input type="checkbox" name="features" id="feature-c" value="featureC">Feature C</label>
       </fieldset>
 
       <!-- Written Review -->
-      <label for="comments">Written Review</label>
-      <textarea id="comments" name="comments" rows="5" placeholder="Share your thoughts..."></textarea>
+      <div class="form-group">
+        <label for="review-text">Written Review</label>
+        <textarea id="review-text" name="reviewText" rows="4"></textarea>
+      </div>
 
       <!-- User Name -->
-      <label for="userName">Your Name</label>
-      <input type="text" id="userName" name="userName" placeholder="Optional">
+      <div class="form-group">
+        <label for="user-name">Your Name</label>
+        <input type="text" id="user-name" name="userName">
+      </div>
 
-      <!-- Submit -->
-      <input type="submit" value="Submit Review">
+      <!-- Submit Button -->
+      <div class="form-group">
+        <input type="submit" value="Submit Review">
+      </div>
     </form>
   </main>
 
@@ -61,6 +69,6 @@
     <p>&copy; 2025 Andrew Godspower</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="scripts/form.js"></script>
 </body>
 </html>
