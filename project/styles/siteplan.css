@@ -1,0 +1,32 @@
+/* siteplan.css */
+
+:root {
+  --primary-color: #A8D8EA;
+  --accent-color: #F6A6B2;
+  --text-color: #333333;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Lora', serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--accent-color);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+pre {
+  background-color: #ffffff;
+  border: 1px dashed var(--accent-color);
+  padding: 1rem;
+  overflow-x: auto;
+}
