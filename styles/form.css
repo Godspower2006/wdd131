@@ -1,123 +1,79 @@
 
-:root {
-  --primary-bg: #fafafa;
-  --accent-color: #5c9ead;
-  --text-color: #333;
-  --error-color: #c0392b;
-}
-
 * {
   box-sizing: border-box;
 }
-
 body {
+  font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 1rem;
-  font-family: 'Lora', serif;
-  background-color: var(--primary-bg);
-  color: var(--text-color);
+  line-height: 1.5;
+  background: #fafafa;
+  color: #222;
 }
-
-header,
-footer {
+header, footer {
+  background: #322138;
+  color: #fff;
   text-align: center;
-  margin-bottom: 1rem;
-}
-
-h1 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--accent-color);
-  margin: 0.5rem 0;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
   padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
-.form-group,
-fieldset {
+/* Layout */
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #e6e0f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Form */
+.form-group {
   margin-bottom: 1rem;
 }
-
 label {
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
 }
-
 .required {
-  color: var(--error-color);
+  color: crimson;
 }
-
 input[type="text"],
 input[type="date"],
 select,
 textarea {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 2px;
+  border: 1px solid #999;
+  border-radius: 4px;
 }
-
-/* Focus states for accessibility */
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-/* Error message styling */
-.error-message {
-  color: var(--error-color);
-  font-size: 0.9rem;
-  margin-top: 0.3rem;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-}
-
-legend {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin-right: 0.3rem;
-}
-
 input[type="submit"] {
-  background-color: var(--accent-color);
-  color: #fff;
+  padding: 0.75rem 1.5rem;
   border: none;
-  padding: 0.7rem 1.2rem;
-  cursor: pointer;
+  border-radius: 4px;
+  background: #322138;
+  color: #fff;
   font-size: 1rem;
-  border-radius: 2px;
+  cursor: pointer;
 }
-
 input[type="submit"]:hover {
   opacity: 0.9;
 }
-
-/* Desktop adjustments */
-@media (min-width: 600px) {
-  .form-group {
-    display: flex;
-    align-items: center;
-  }
-  .form-group > label {
-    flex: 1 0 150px;
-    margin: 0;
-  }
-  .form-group > *:not(label) {
-    flex: 2 0 0;
-  }
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: bold;
+}
+fieldset label {
+  display: inline-block;
+  margin-right: 1rem;
+}
+dl dt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+dl dd {
+  margin: 0 0 0.5rem 1rem;
 }
