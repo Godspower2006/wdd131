@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header>
+    <h1>Thank You for Your Review!</h1>
+  </header>
+
+  <main>
+    <section id="submission-details">
+      <h2>Your Submission</h2>
+      <ul>
+        <li><strong>Product:</strong> <span id="detail-product"></span></li>
+        <li><strong>Rating:</strong> <span id="detail-rating"></span> ☆</li>
+        <li><strong>Date Installed:</strong> <span id="detail-installDate"></span></li>
+        <li><strong>Features:</strong> <span id="detail-features"></span></li>
+        <li><strong>Review Text:</strong> <span id="detail-reviewText"></span></li>
+        <li><strong>Your Name:</strong> <span id="detail-userName"></span></li>
+      </ul>
+    </section>
+
+    <section id="review-count">
+      <p>You have submitted <span id="count">0</span> reviews so far.</p>
+    </section>
+
+    <p><a href="form.html">Submit Another Review</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Andrew Godspower</p>
+  </footer>
+
+  <script>
+    // Parse query parameters
+    const params = new URLSearchParams(window.location.search);
+    const getParam = key => params.get(key) || 'N/A';
+
+    // Populate details
+    document.getElementById('detail-product').textContent = getParam('product');
+    document.getElementById('detail-rating').textContent = getParam('rating');
+    document.getElementById('detail-installDate').textContent = getParam('installDate');
+
+    // Features: multiple checkbox values
+    const features = params.getAll('features');
+    document.getElementById('detail-features').textContent = features.length ? features.join(', ') : 'None';
+
+    document.getElementById('detail-reviewText').textContent = getParam('reviewText');
+    document.getElementById('detail-userName').textContent = getParam('userName');
+
+    // localStorage review count
+    const storageKey = 'reviewCount';
+    let count = parseInt(localStorage.getItem(storageKey)) || 0;
+    count += 1;
+    localStorage.setItem(storageKey, count);
+    document.getElementById('count').textContent = count;
+  </script>
+</body>
+</html>
