@@ -2,22 +2,33 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Review Confirmation | Andrew Godspower</title>
+  <meta name="description" content="Thank you for submitting your product review! See your submitted details and total reviews count.">
+  <meta name="author" content="Andrew Godspower">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/form.css">
+
   <script defer>
-    // Increment and display review count
-    const count = Number(localStorage.getItem('reviewCount') || 0) + 1;
-    localStorage.setItem('reviewCount', count);
+    // Increment review counter
+    const newCount = Number(localStorage.getItem('reviewCount') || 0) + 1;
+    localStorage.setItem('reviewCount', newCount);
+
     window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('count').textContent = count;
-      // Parse query string
+      // Display count
+      document.getElementById('count').textContent = newCount;
+
+      // Parse form data from query string
       const params = new URLSearchParams(location.search);
       document.getElementById('out-product').textContent = params.get('product');
       document.getElementById('out-rating').textContent = params.get('rating');
       document.getElementById('out-installed').textContent = params.get('installed');
-      document.getElementById('out-features').textContent =
-        params.getAll('features').join(', ') || 'None';
+      const feats = params.getAll('features');
+      document.getElementById('out-features').textContent = feats.length ? feats.join(', ') : 'None';
       document.getElementById('out-review').textContent = params.get('review') || '(none)';
       document.getElementById('out-user').textContent = params.get('username') || '(anonymous)';
     });
@@ -31,13 +42,25 @@
   <main>
     <p>This is review <strong id="count"></strong> you’ve submitted.</p>
     <dl>
-      <dt>Product:</dt><dd id="out-product"></dd>
-      <dt>Rating:</dt><dd id="out-rating"></dd>
-      <dt>Date Installed:</dt><dd id="out-installed"></dd>
-      <dt>Features:</dt><dd id="out-features"></dd>
-      <dt>Your Comments:</dt><dd id="out-review"></dd>
-      <dt>Your Name:</dt><dd id="out-user"></dd>
+      <dt>Product:</dt>
+      <dd id="out-product"></dd>
+
+      <dt>Rating:</dt>
+      <dd id="out-rating"></dd>
+
+      <dt>Date Installed:</dt>
+      <dd id="out-installed"></dd>
+
+      <dt>Features:</dt>
+      <dd id="out-features"></dd>
+
+      <dt>Your Comments:</dt>
+      <dd id="out-review"></dd>
+
+      <dt>Your Name:</dt>
+      <dd id="out-user"></dd>
     </dl>
+
     <p><a href="form.html">Submit another review</a></p>
   </main>
 

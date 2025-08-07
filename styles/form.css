@@ -1,14 +1,16 @@
-
+/* Box sizing and reset */
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   background: #fafafa;
   color: #222;
 }
+
+/* Header & Footer */
 header, footer {
   background: #322138;
   color: #fff;
@@ -16,7 +18,7 @@ header, footer {
   padding: 1rem;
 }
 
-/* Layout */
+/* Main container */
 main {
   max-width: 600px;
   margin: 2rem auto;
@@ -25,7 +27,7 @@ main {
   border-radius: 8px;
 }
 
-/* Form */
+/* Form groups */
 .form-group {
   margin-bottom: 1rem;
 }
@@ -37,6 +39,8 @@ label {
 .required {
   color: crimson;
 }
+
+/* Inputs, selects, textarea */
 input[type="text"],
 input[type="date"],
 select,
@@ -46,6 +50,24 @@ textarea {
   border: 1px solid #999;
   border-radius: 4px;
 }
+
+/* Radio & Checkbox fieldsets */
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+fieldset label {
+  display: inline-block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Submit button */
 input[type="submit"] {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -58,18 +80,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
   opacity: 0.9;
 }
-fieldset {
-  border: none;
-  padding: 0;
-  margin-bottom: 1rem;
-}
-legend {
-  font-weight: bold;
-}
-fieldset label {
-  display: inline-block;
-  margin-right: 1rem;
-}
+
+/* Definition list on review page */
 dl dt {
   font-weight: bold;
   margin-top: 0.5rem;

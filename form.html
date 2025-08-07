@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Review Form | Andrew Godspower</title>
   <meta name="description" content="Submit your review of our product—select ratings, choose features you found useful, and share your installation experience.">
   <meta name="author" content="Andrew Godspower">
@@ -27,7 +27,7 @@
       <div class="form-group">
         <label for="product">Product Name <span class="required">*</span></label>
         <select id="product" name="product" required>
-          <option disabled selected>Select a Product …</option>
+          <option value="" disabled selected>Select a Product …</option>
           <!-- options injected by form.js -->
         </select>
       </div>
@@ -35,11 +35,21 @@
       <!-- Overall Rating -->
       <fieldset class="form-group">
         <legend>Overall Rating <span class="required">*</span></legend>
-        <label><input type="radio" name="rating" value="1" required> ☆</label>
-        <label><input type="radio" name="rating" value="2"> ★☆</label>
-        <label><input type="radio" name="rating" value="3"> ★★☆</label>
-        <label><input type="radio" name="rating" value="4"> ★★★☆</label>
-        <label><input type="radio" name="rating" value="5"> ★★★★</label>
+        <label for="rating-1">
+          <input type="radio" id="rating-1" name="rating" value="1" required> ☆
+        </label>
+        <label for="rating-2">
+          <input type="radio" id="rating-2" name="rating" value="2"> ★☆
+        </label>
+        <label for="rating-3">
+          <input type="radio" id="rating-3" name="rating" value="3"> ★★☆
+        </label>
+        <label for="rating-4">
+          <input type="radio" id="rating-4" name="rating" value="4"> ★★★☆
+        </label>
+        <label for="rating-5">
+          <input type="radio" id="rating-5" name="rating" value="5"> ★★★★
+        </label>
       </fieldset>
 
       <!-- Date of Installation -->
@@ -51,10 +61,18 @@
       <!-- Useful Features -->
       <fieldset class="form-group">
         <legend>Which features did you find useful? <small>(Check all that apply)</small></legend>
-        <label><input type="checkbox" id="feat-dur" name="features" value="Durability"> Durability</label>
-        <label><input type="checkbox" id="feat-ease" name="features" value="Ease of Use"> Ease of Use</label>
-        <label><input type="checkbox" id="feat-perf" name="features" value="Performance"> Performance</label>
-        <label><input type="checkbox" id="feat-design" name="features" value="Design"> Design</label>
+        <label for="feat-dur">
+          <input type="checkbox" id="feat-dur" name="features" value="Durability"> Durability
+        </label>
+        <label for="feat-ease">
+          <input type="checkbox" id="feat-ease" name="features" value="Ease of Use"> Ease of Use
+        </label>
+        <label for="feat-perf">
+          <input type="checkbox" id="feat-perf" name="features" value="Performance"> Performance
+        </label>
+        <label for="feat-design">
+          <input type="checkbox" id="feat-design" name="features" value="Design"> Design
+        </label>
       </fieldset>
 
       <!-- Written Review -->
@@ -71,7 +89,7 @@
 
       <!-- Submit -->
       <div class="form-group">
-        <input type="submit">
+        <input type="submit" value="Submit Review">
       </div>
     </form>
   </main>
