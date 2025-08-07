@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Album | Responsive Picture Gallery</title>
-  <meta name="description" content="A mobile‑first, responsive album showcasing ancient temple images with filtering and lazy loading.">
+  <meta
+    name="description"
+    content="W04 Enhanced Temple Picture Album by Andrew Godspower: a mobile-first gallery with lazy-loading images and Old/New/Large/Small filters."
+  >
   <meta name="author" content="Andrew Godspower">
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
+  <title>W04 Enhanced Temple Picture Album | Andrew Godspower</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
 </head>
 <body>
   <header>
     <h1>Temple Album</h1>
-    <button id="hamburger" aria-label="Toggle menu">☰</button>
-    <nav id="main-nav">
+    <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
+        <li><a href="#" id="home-btn">Home</a></li>
+        <li><a href="#" id="old-btn">Old</a></li>
+        <li><a href="#" id="new-btn">New</a></li>
+        <li><a href="#" id="large-btn">Large</a></li>
+        <li><a href="#" id="small-btn">Small</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Temple Gallery</h2>
-    <section class="gallery" id="gallery">
-      <!-- Temple cards injected by JavaScript -->
-    </section>
+    <div id="temple-cards-container" class="gallery"></div>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> 🌸 Andrew Godspower 🌸 Nigeria</p>
-    <p>Last Modification: <span id="modified"></span></p>
+    <p>&copy; <span id="year"></span> Andrew Godspower</p>
+    <p>Last modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script defer src="scripts/temples.js"></script>
+  <!-- JavaScript -->
+  <script src="scripts/filtered-temples.js" defer></script>
 </body>
 </html>
