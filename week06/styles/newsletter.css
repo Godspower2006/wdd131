@@ -1,0 +1,92 @@
+/* newsletter.css - mobile-first */
+
+:root{
+  --header-bg: #2d003e;
+  --form-bg: #e9e1ea;
+  --accent: #6a2a7b;
+  --button-bg: #4a148c;
+  --text: #222;
+  --muted: #555;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Lora', serif;
+  color:var(--text);
+  background: #f6f5f8;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{background:var(--header-bg); color:#fff; padding:1rem 0}
+.nav{max-width:980px; margin:0 auto; padding:0 1rem; display:flex; align-items:center; gap:1rem; justify-content:space-between}
+.site-title{font-family:'Poppins',sans-serif; font-size:1.25rem; margin:0}
+.menu-toggle{background:none;border:0;color:#fff;font-size:1.2rem;display:none}
+
+/* navigation - simple inline on wide screens */
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.nav-list a{color:#fff;text-decoration:none;font-weight:600}
+
+/* hero */
+.hero{max-width:980px;margin:1rem auto;padding:0 1rem}
+.hero h2{font-family:'Poppins',sans-serif;color:var(--accent);margin:0 0 .25rem}
+.hero p{margin:.25rem 0 .5rem;color:var(--muted)}
+.subscriber-line{margin-top:.5rem;font-size:.95rem;color:var(--muted)}
+
+/* form */
+.form-section{max-width:640px;margin:1rem auto;background:transparent;padding:0 1rem}
+.signup-form{
+  background:var(--form-bg);
+  padding:1.25rem;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,0.06);
+  box-shadow:0 1px 0 rgba(0,0,0,0.02);
+}
+
+.form-row{margin-bottom:1rem}
+label{display:block;margin-bottom:.35rem;font-weight:600}
+input[type="text"], input[type="email"], textarea{
+  width:100%;
+  padding:.55rem .6rem;
+  border:1px solid #cfc8d5;
+  border-radius:4px;
+  background:#fff;
+  font:inherit;
+}
+
+.required{color:#c0392b;margin-left:.25rem}
+fieldset{border:none;padding:0}
+fieldset label{display:block;font-weight:normal;margin:.35rem 0}
+
+.btn{
+  display:inline-block;
+  width:100%;
+  padding:.9rem;
+  font-family:'Poppins',sans-serif;
+  background:var(--button-bg);
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  text-transform:none;
+  font-size:1rem;
+}
+.btn:focus, input:focus, textarea:focus {outline:3px solid rgba(106,42,123,0.18); outline-offset:2px}
+
+/* status message visually hidden by default but visible when not sr-only */
+.sr-only{position:static; clip:auto; width:auto; height:auto; overflow:visible}
+#signup-message{min-height:1.6rem;margin-bottom:.5rem;color:var(--accent); font-weight:600}
+
+/* footer */
+.site-footer{background:var(--header-bg); color:#fff; padding:1rem; text-align:center; margin-top:1.25rem}
+.site-footer a{color:#ffd9ff}
+
+/* larger screens */
+@media(min-width:700px){
+  .menu-toggle{display:none}
+  .nav-list{gap:1.25rem}
+  .signup-form{padding:2rem}
+  .nav{padding:0 1.5rem}
+}
